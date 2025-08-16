@@ -89,15 +89,7 @@ export default function Footer() {
                   導遊介紹
                 </button>
               </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('reviews')} 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  data-testid="footer-nav-reviews"
-                >
-                  客戶評價
-                </button>
-              </li>
+
               <li>
                 <button 
                   onClick={() => scrollToSection('booking')} 

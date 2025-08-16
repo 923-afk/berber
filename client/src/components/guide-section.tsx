@@ -3,7 +3,7 @@ import { Tag, Star, CheckCircle, Quote } from "lucide-react";
 export default function GuideSection() {
   const qualifications = [
     "德國官方認證導遊執照",
-    "10年以上導遊經驗",
+    "多年導遊經驗",
     "德國歷史文化專業背景",
     "流利廣東話及普通話"
   ];
@@ -28,12 +28,6 @@ export default function GuideSection() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-                alt="Professional tour guide" 
-                className="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"
-                data-testid="img-guide-avatar"
-              />
               <h3 className="text-2xl font-bold mb-2">Berber 導遊</h3>
               <p className="text-berlin-red font-semibold mb-4">資深中文導遊 • 德國歷史專家</p>
             </div>

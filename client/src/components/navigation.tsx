@@ -52,13 +52,7 @@ export default function Navigation() {
             >
               導遊介紹
             </button>
-            <button 
-              onClick={() => scrollToSection('reviews')} 
-              className="text-warm-gray hover:text-berlin-red transition-colors"
-              data-testid="nav-reviews"
-            >
-              客戶評價
-            </button>
+
             <button 
               onClick={() => scrollToSection('booking')} 
               className="text-warm-gray hover:text-berlin-red transition-colors"
@@ -103,13 +97,7 @@ export default function Navigation() {
               >
                 導遊介紹
               </button>
-              <button 
-                onClick={() => scrollToSection('reviews')} 
-                className="block py-2 text-warm-gray hover:text-berlin-red w-full text-left"
-                data-testid="mobile-nav-reviews"
-              >
-                客戶評價
-              </button>
+
               <button 
                 onClick={() => scrollToSection('booking')} 
                 className="block py-2 text-warm-gray hover:text-berlin-red w-full text-left"
