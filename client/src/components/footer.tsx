@@ -1,4 +1,4 @@
-import { MapPin, Euro, Clock, Facebook, Instagram } from "lucide-react";
+import { MapPin, Euro, Clock } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -23,20 +23,6 @@ export default function Footer() {
               讓每一次旅程都充滿意義與感動。
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="text-gray-300 hover:text-white transition-colors"
-                data-testid="social-facebook"
-              >
-                <Facebook className="text-2xl" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-300 hover:text-white transition-colors"
-                data-testid="social-instagram"
-              >
-                <Instagram className="text-2xl" />
-              </a>
               <a 
                 href="#" 
                 className="text-gray-300 hover:text-white transition-colors"
