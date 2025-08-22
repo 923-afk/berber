@@ -42,15 +42,6 @@ export default function ToursSection() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Tour Image */}
-          <div className="order-2 lg:order-1">
-            <img 
-              src="https://pixabay.com/get/gf5a6d4c43147eeea67db11b2db5fd7e9eedb49e4c1da0b32c78c599b14bfd2337873b6bb587faa1da4ca303ba988ff1123ef7135278cdfb8a73b9a0c8fcef475_1280.jpg" 
-              alt="Sachsenhausen Concentration Camp memorial entrance" 
-              className="rounded-2xl shadow-2xl w-full h-auto"
-            />
-          </div>
-          
           {/* Tour Details */}
           <div className="order-1 lg:order-2">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
