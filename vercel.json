@@ -7,9 +7,6 @@
     }
   ],
   "routes": [
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "/googlea6ffea71d3f83697.html", "dest": "/googlea6ffea71d3f83697.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ],
   "functions": {
@@ -24,6 +21,10 @@
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
         }
       ]
     }
