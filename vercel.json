@@ -12,11 +12,16 @@
     {
       "src": "sitemap.xml",
       "use": "@vercel/static"
+    },
+    {
+      "src": "googlea6ffea71d3f83697.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/googlea6ffea71d3f83697.html", "dest": "/googlea6ffea71d3f83697.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
