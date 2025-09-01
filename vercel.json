@@ -7,7 +7,26 @@
     }
   ],
   "routes": [
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/googlea6ffea71d3f83697.html", "dest": "/googlea6ffea71d3f83697.html" },
     { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "functions": {
+    "dist/public/**": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
   ]
 }
 
