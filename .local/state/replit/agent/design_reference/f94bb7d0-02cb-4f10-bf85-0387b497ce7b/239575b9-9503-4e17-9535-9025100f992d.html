@@ -1,0 +1,887 @@
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk With Me 柏林中文導賞 - 專業中文導遊服務</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'berlin-red': '#C41E3A',
+                    'berlin-gold': '#F59E0B',
+                    'warm-gray': '#6B7280',
+                    'charcoal': '#1F2937'
+                },
+                fontFamily: {
+                    'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                }
+            }
+        }
+    };
+    </script>
+</head>
+<body class="font-inter text-charcoal bg-gray-50 scroll-smooth">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-marked-alt text-berlin-red text-xl"></i>
+                    <span class="font-bold text-xl text-charcoal">Walk With Me 柏林導賞</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#services" class="text-warm-gray hover:text-berlin-red transition-colors">服務介紹</a>
+                    <a href="#tours" class="text-warm-gray hover:text-berlin-red transition-colors">行程詳情</a>
+                    <a href="#guide" class="text-warm-gray hover:text-berlin-red transition-colors">導遊介紹</a>
+                    <a href="#reviews" class="text-warm-gray hover:text-berlin-red transition-colors">客戶評價</a>
+                    <a href="#booking" class="text-warm-gray hover:text-berlin-red transition-colors">立即預約</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-warm-gray hover:text-berlin-red">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#services" class="block py-2 text-warm-gray hover:text-berlin-red">服務介紹</a>
+                <a href="#tours" class="block py-2 text-warm-gray hover:text-berlin-red">行程詳情</a>
+                <a href="#guide" class="block py-2 text-warm-gray hover:text-berlin-red">導遊介紹</a>
+                <a href="#reviews" class="block py-2 text-warm-gray hover:text-berlin-red">客戶評價</a>
+                <a href="#booking" class="block py-2 text-warm-gray hover:text-berlin-red">立即預約</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        <!-- Berlin Brandenburg Gate background image -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50">
+            <img src="https://pixabay.com/get/g5387af6ef1004e51791632fa0a2fb439e9be68c0bd2c75737de09e605e03bf8490cb306b912faea026db2fc567fa5c42482e9e993a4846a1056f538bffd3bdf5_1280.jpg" 
+                 alt="Berlin Brandenburg Gate at sunset" 
+                 class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                發現柏林的<span class="text-berlin-gold">深度故事</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+                專業中文導遊帶您深入了解柏林歷史文化<br>
+                薩克森豪森集中營 • 柏林圍牆 • 歷史見證
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#booking" class="bg-berlin-red hover:bg-red-700 px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    立即預約導賞
+                </a>
+                <a href="#tours" class="border-2 border-white hover:bg-white hover:text-charcoal px-8 py-4 rounded-full text-lg font-semibold transition-all">
+                    了解更多
+                </a>
+            </div>
+            
+            <!-- Quick Info -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <i class="fas fa-language text-berlin-gold text-2xl mb-2"></i>
+                    <h3 class="font-semibold mb-1">廣東話 / 中文</h3>
+                    <p class="text-sm opacity-80">專業導賞服務</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <i class="fas fa-euro-sign text-berlin-gold text-2xl mb-2"></i>
+                    <h3 class="font-semibold mb-1">€20 每位</h3>
+                    <p class="text-sm opacity-80">包團體入場費</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <i class="fas fa-clock text-berlin-gold text-2xl mb-2"></i>
+                    <h3 class="font-semibold mb-1">3小時深度遊</h3>
+                    <p class="text-sm opacity-80">上午或下午時段</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">為什麼選擇我們？</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    專業、貼心、深度的中文導賞服務，讓您的柏林之旅更有意義
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">專業導遊資格</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        持有正式導遊證照，深度了解德國歷史文化，提供專業詳盡的解說服務
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">貼心中文服務</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        母語級廣東話及普通話服務，深入淺出地為您解說歷史，無語言障礙
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-history text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">深度歷史解說</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        不只是景點介紹，更帶您了解背後的歷史故事，感受歷史的重量與意義
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">小團精緻體驗</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        小團制導賞，確保每位團友都能獲得充分的關注和互動機會
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-mobile-alt text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">便捷預約方式</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        支援 LINE 和 WhatsApp 預約，輕鬆安排您的柏林歷史之旅
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-berlin-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">五星好評保證</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        獲得眾多遊客好評推薦，提供超越期待的優質導賞體驗
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Detail Section -->
+    <section id="tours" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">薩克森豪森集中營導賞團</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    深度了解第二次世界大戰歷史，感受歷史的重量與意義
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Tour Image -->
+                <div class="order-2 lg:order-1">
+                    <!-- Sachsenhausen Concentration Camp memorial site entrance -->
+                    <img src="https://pixabay.com/get/gf5a6d4c43147eeea67db11b2db5fd7e9eedb49e4c1da0b32c78c599b14bfd2337873b6bb587faa1da4ca303ba988ff1123ef7135278cdfb8a73b9a0c8fcef475_1280.jpg" 
+                         alt="Sachsenhausen Concentration Camp memorial entrance" 
+                         class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+                
+                <!-- Tour Details -->
+                <div class="order-1 lg:order-2">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-charcoal">行程詳細資訊</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-berlin-red/10 p-3 rounded-full flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-berlin-red"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">地點</h4>
+                                    <p class="text-warm-gray">Str. d. Nationen 22, Oranienburg</p>
+                                    <p class="text-sm text-warm-gray">集合地點：集中營資訊中心門口</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-berlin-red/10 p-3 rounded-full flex-shrink-0">
+                                    <i class="fas fa-euro-sign text-berlin-red"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">費用</h4>
+                                    <p class="text-warm-gray">每位 €20（已包括集中營收取的團體費用）</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-berlin-red/10 p-3 rounded-full flex-shrink-0">
+                                    <i class="fas fa-clock text-berlin-red"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">時間安排</h4>
+                                    <p class="text-warm-gray">上午 10:00 - 下午 1:00</p>
+                                    <p class="text-warm-gray">下午 2:00 - 下午 5:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-berlin-red/10 p-3 rounded-full flex-shrink-0">
+                                    <i class="fas fa-info-circle text-berlin-red"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">導賞內容</h4>
+                                    <p class="text-warm-gray">詳細介紹第二次世界大戰集中營的歷史及營內設施和用途，以及戰後的變遷</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="#booking" class="w-full bg-berlin-red hover:bg-red-700 text-white py-4 px-6 rounded-full font-semibold text-center block transition-all transform hover:scale-105">
+                                立即預約這個行程
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tour Highlights -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center mb-10">導賞重點</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                        <i class="fas fa-university text-berlin-red text-2xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">營房建築</h4>
+                        <p class="text-warm-gray text-sm">了解集中營的建築結構和囚犯生活環境</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                        <i class="fas fa-book-open text-berlin-red text-2xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">歷史背景</h4>
+                        <p class="text-warm-gray text-sm">深入了解納粹時期的歷史脈絡</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                        <i class="fas fa-monument text-berlin-red text-2xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">紀念設施</h4>
+                        <p class="text-warm-gray text-sm">參觀各種紀念碑和展示設施</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                        <i class="fas fa-heart text-berlin-red text-2xl mb-4"></i>
+                        <h4 class="font-semibold mb-2">人性思考</h4>
+                        <p class="text-warm-gray text-sm">引導深度思考歷史與人性的課題</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Introduction -->
+    <section id="guide" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">專業導遊介紹</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    經驗豐富的導遊團隊，為您提供最專業的中文導賞服務
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <!-- Professional tour guide in Berlin -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                             alt="Professional tour guide" 
+                             class="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Berber 導遊</h3>
+                        <p class="text-berlin-red font-semibold mb-4">資深中文導遊 • 德國歷史專家</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4 flex items-center">
+                                <i class="fas fa-certificate text-berlin-red mr-3"></i>
+                                專業資歷
+                            </h4>
+                            <ul class="space-y-2 text-warm-gray">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    德國官方認證導遊執照
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    10年以上導遊經驗
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    德國歷史文化專業背景
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    流利廣東話及普通話
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4 flex items-center">
+                                <i class="fas fa-star text-berlin-red mr-3"></i>
+                                服務特色
+                            </h4>
+                            <ul class="space-y-2 text-warm-gray">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    深入淺出的歷史解說
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    互動式導賞體驗
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    客製化行程安排
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-berlin-gold mt-1 mr-2 text-sm"></i>
+                                    貼心周到的服務態度
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-white rounded-xl">
+                        <h4 class="font-semibold text-lg mb-3 flex items-center">
+                            <i class="fas fa-quote-left text-berlin-red mr-3"></i>
+                            導遊的話
+                        </h4>
+                        <p class="text-warm-gray italic leading-relaxed">
+                            "每一次的導賞都是一次歷史的重溫，我希望透過專業的解說和親切的服務，
+                            讓每位遊客不僅了解德國的歷史，更能從中思考人性和和平的珍貴。
+                            歡迎您來到柏林，讓我們一起走過這段重要的歷史。"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">客戶真實評價</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    來自世界各地的遊客對我們服務的真實評價和推薦
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "Berber 導遊非常專業，解說詳細生動，讓我們深入了解了這段沉重的歷史。
+                        整個行程安排得很好，強烈推薦給想了解德國歷史的朋友們！"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Asian female tourist -->
+                        <img src="https://pixabay.com/get/gae75592cae156a88afc6b1a26c57d9b8cdf6b00f3f944f3e2687e85adccadf0ceda2917bb9cc63263384b31984a28d57cbceb5ccd67090cf9e488991bc1cd03a_1280.jpg" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">李女士</h4>
+                            <p class="text-warm-gray text-sm">來自香港</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "第一次參加中文導賞團，感受真的很不一樣！
+                        用母語聽歷史故事特別有感觸，Berber 很用心地解答我們的每個問題。"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Asian male tourist -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">張先生</h4>
+                            <p class="text-warm-gray text-sm">來自台灣</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "很有意義的一次行程，不僅學到了歷史知識，
+                        更重要的是讓我們思考了很多關於人性和和平的問題。非常推薦！"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Asian couple tourists -->
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">王太太</h4>
+                            <p class="text-warm-gray text-sm">來自新加坡</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "預約過程很簡單，透過 WhatsApp 就搞定了。
+                        導遊準時到達，整個行程節奏很好，時間控制得很準確。"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Young Asian male -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">陳同學</h4>
+                            <p class="text-warm-gray text-sm">來自馬來西亞</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "小團制的感受真的很棒，可以隨時提問，
+                        導遊也會根據我們的興趣調整解說重點。物超所值！"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Mature Asian woman -->
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">劉女士</h4>
+                            <p class="text-warm-gray text-sm">來自中國大陸</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-berlin-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-warm-gray text-sm">5.0</span>
+                    </div>
+                    <p class="text-warm-gray mb-6 leading-relaxed">
+                        "作為歷史愛好者，我對這次導賞非常滿意。
+                        導遊的專業知識豐富，能回答我們各種深入的問題。"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Middle-aged Asian man with glasses -->
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                             alt="Customer review" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">林教授</h4>
+                            <p class="text-warm-gray text-sm">來自香港</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review Statistics -->
+            <div class="mt-16 bg-white rounded-2xl p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-4">客戶滿意度統計</h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-berlin-red mb-2">98%</div>
+                        <p class="text-warm-gray">客戶滿意度</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-berlin-red mb-2">500+</div>
+                        <p class="text-warm-gray">服務客戶</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-berlin-red mb-2">4.9</div>
+                        <p class="text-warm-gray">平均評分</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-berlin-red mb-2">95%</div>
+                        <p class="text-warm-gray">回購率</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">立即預約您的柏林歷史之旅</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    簡單三步驟，輕鬆預約專業的中文導賞服務
+                </p>
+            </div>
+            
+            <!-- Booking Process -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-berlin-red font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">選擇日期時段</h3>
+                    <p class="text-warm-gray">選擇您方便的日期和時段（上午或下午）</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-berlin-red font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">填寫聯絡資訊</h3>
+                    <p class="text-warm-gray">提供您的 LINE 或 WhatsApp 聯絡方式</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-berlin-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-berlin-red font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">確認預約</h3>
+                    <p class="text-warm-gray">我們會透過您提供的方式確認預約詳情</p>
+                </div>
+            </div>
+            
+            <!-- Embedded Booking Form -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-center mb-8">預約表單</h3>
+                    
+                    <!-- Google Form Embed Container -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2bd0axyUOnG4lQslUesq6Te7iAKum-veh982XybjHGNF8Yw/viewform?embedded=true" 
+                                width="100%" 
+                                height="800" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                class="rounded-lg">
+                            載入中…
+                        </iframe>
+                    </div>
+                    
+                    <!-- Alternative Contact Methods -->
+                    <div class="mt-8 text-center">
+                        <p class="text-warm-gray mb-4">或者您也可以直接透過以下方式聯絡我們：</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="#" class="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition-colors" data-mock="true">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-2 bg-green-400 hover:bg-green-500 text-white px-6 py-3 rounded-full transition-colors" data-mock="true">
+                                <i class="fab fa-line text-xl"></i>
+                                <span>LINE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">常見問題</h2>
+                <p class="text-lg text-warm-gray max-w-2xl mx-auto">
+                    解答您可能關心的問題，讓您安心預約
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">如何前往薩克森豪森集中營？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>從柏林市中心可搭乘 S1 線至 Oranienburg 站，再轉乘巴士或步行約 20 分鐘即可到達。我們建議您提前 15 分鐘到達集合地點（集中營資訊中心門口）。如需詳細交通指引，預約確認後我們會提供完整的交通資訊。</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">導賞團的語言是廣東話還是普通話？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>我們的導遊精通廣東話和普通話，會根據團友的需求調整使用的語言。如果團內有不同語言需求的朋友，我們會盡量兼顧兩種語言進行解說，確保每位團友都能充分理解導賞內容。</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">€20 的費用包括什麼？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>€20 的費用已包括：專業中文導遊服務（3小時）、集中營的團體入場費、詳細的歷史解說和問答時間。您只需要負擔前往集中營的交通費用即可。我們提供的是全包式服務，沒有任何隱藏費用。</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">可以取消或更改預約嗎？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>我們理解計劃可能會有變動。如需取消或更改預約，請至少提前 24 小時透過 LINE 或 WhatsApp 聯絡我們。我們會盡力配合您的需求，協助安排其他合適的時段。</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">導賞團適合什麼年齡參加？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>由於薩克森豪森集中營涉及沉重的歷史內容，我們建議 14 歲以上的朋友參加。對於年輕的參加者，我們會適度調整解說方式，確保內容既有教育意義又不會造成過度的心理負擔。</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none">
+                        <h3 class="text-lg font-semibold">天氣不好會取消導賞嗎？</h3>
+                        <i class="fas fa-chevron-down text-warm-gray transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-warm-gray">
+                        <p>集中營內有室內展館和戶外區域，一般的雨天不會影響導賞進行。我們建議您根據天氣預報準備適當的衣物。只有在極端天氣情況下（如暴風雪），我們才會建議延期，並會提前通知您。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-map-marked-alt text-berlin-red text-2xl"></i>
+                        <span class="font-bold text-xl">Walk With Me 柏林導賞</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        專業的中文導遊服務，為您提供深度的柏林歷史文化體驗。
+                        讓每一次旅程都充滿意義與感動。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-line text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">快速連結</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">服務介紹</a></li>
+                        <li><a href="#tours" class="text-gray-300 hover:text-white transition-colors">行程詳情</a></li>
+                        <li><a href="#guide" class="text-gray-300 hover:text-white transition-colors">導遊介紹</a></li>
+                        <li><a href="#reviews" class="text-gray-300 hover:text-white transition-colors">客戶評價</a></li>
+                        <li><a href="#booking" class="text-gray-300 hover:text-white transition-colors">立即預約</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">聯絡我們</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-berlin-red mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">集合地點</p>
+                                <p class="text-white">Str. d. Nationen 22, Oranienburg</p>
+                                <p class="text-sm text-gray-400">薩克森豪森集中營資訊中心門口</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-euro-sign text-berlin-red mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">費用</p>
+                                <p class="text-white">€20 每位（包含團體入場費）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-clock text-berlin-red mt-1"></i>
+                            <div>
+                                <p class="text-gray-300">時段</p>
+                                <p class="text-white">上午 10:00-13:00</p>
+                                <p class="text-white">下午 14:00-17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-600 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Walk With Me 柏林中文導賞. 版權所有 | 
+                    <span data-mock="true">由專業導遊 Berber 提供服務</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Add loading animation for iframe
+        const iframe = document.querySelector('iframe');
+        if (iframe) {
+            iframe.addEventListener('load', function() {
+                // TODO: Remove loading spinner if implemented
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

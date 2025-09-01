@@ -1,0 +1,516 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>柏林歷史導賞團預訂 - Berlin Historical Tours Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1976D2',
+                        'primary-dark': '#1565C0',
+                        secondary: '#FFC107',
+                        success: '#4CAF50',
+                        error: '#F44336',
+                        warning: '#FF9800',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-inter bg-gray-50 min-h-screen">
+    <!-- @COMPONENT: Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-landmark text-primary text-2xl"></i>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">柏林歷史導賞團</h1>
+                    <p class="text-sm text-gray-600">Berlin Historical Tours</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- @COMPONENT: TourInformation -->
+        <div class="bg-white rounded-lg shadow-md mb-8 overflow-hidden">
+            <div class="bg-gradient-to-r from-primary to-primary-dark text-white p-6">
+                <h2 class="text-xl font-semibold mb-2">薩克森豪森集中營導賞團</h2>
+                <p class="text-blue-100">Sachsenhausen Concentration Camp Tour</p>
+            </div>
+            
+            <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">集合地點</h3>
+                                <p class="text-gray-600">集中營資訊中心門口</p>
+                                <p class="text-sm text-gray-500">Str. d. Nationen 22, Oranienburg</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-euro-sign text-primary mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">費用</h3>
+                                <p class="text-2xl font-bold text-primary">€20 <span class="text-base font-normal text-gray-600">每位</span></p>
+                                <p class="text-sm text-gray-500">已包括集中營收取的團體費用</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-language text-primary mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">導賞語言</h3>
+                                <p class="text-gray-600">廣東話或中文</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-clock text-primary mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">導賞時間</h3>
+                                <p class="text-gray-600">約3小時</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">導賞團包括：</h3>
+                    <p class="text-gray-700">詳細介紹第二次世界大戰集中營的歷史及營內設施和用途，以及戰後的變遷。</p>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: TourInformation -->
+
+        <!-- @COMPONENT: BookingForm -->
+        <div class="bg-white rounded-lg shadow-md">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-900">預訂導賞團</h2>
+                <p class="text-gray-600 mt-1">請填寫以下資料完成預訂</p>
+            </div>
+            
+            <form id="bookingForm" class="p-6 space-y-6">
+                <!-- @STATE: formData:object = {} -->
+                <!-- @STATE: errors:object = {} -->
+                
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                        姓名 <span class="text-error">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name"
+                        data-bind="formData.name"
+                        data-mock="true"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        placeholder="請輸入您的姓名"
+                        required
+                    >
+                    <div id="nameError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請輸入姓名
+                    </div>
+                </div>
+
+                <!-- Tour Selection -->
+                <div>
+                    <label for="tour" class="block text-sm font-medium text-gray-700 mb-2">
+                        選擇導賞團 <span class="text-error">*</span>
+                    </label>
+                    <select 
+                        id="tour" 
+                        name="tour"
+                        data-bind="formData.tour"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        required
+                    >
+                        <option value="">請選擇導賞團</option>
+                        <option value="sachsenhausen" selected data-mock="true">薩克森豪森集中營一日遊 - €20</option>
+                        <option value="berlin-wall" data-mock="true">柏林圍牆步行團 - €15</option>
+                    </select>
+                    <div id="tourError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請選擇導賞團
+                    </div>
+                </div>
+
+                <!-- Date Selection -->
+                <div>
+                    <label for="date" class="block text-sm font-medium text-gray-700 mb-2">
+                        參加日期 <span class="text-error">*</span>
+                    </label>
+                    <input 
+                        type="date" 
+                        id="date" 
+                        name="date"
+                        data-bind="formData.date"
+                        data-mock="true"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        min=""
+                        required
+                    >
+                    <div id="dateError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請選擇參加日期
+                    </div>
+                </div>
+
+                <!-- Time Slot Selection -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">
+                        時段選擇 <span class="text-error">*</span>
+                    </label>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input 
+                                type="radio" 
+                                name="timeSlot" 
+                                value="morning"
+                                data-bind="formData.timeSlot"
+                                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                                required
+                            >
+                            <div class="ml-3">
+                                <div class="font-medium text-gray-900">上午時段</div>
+                                <div class="text-sm text-gray-600">10:00 - 13:00</div>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input 
+                                type="radio" 
+                                name="timeSlot" 
+                                value="afternoon"
+                                data-bind="formData.timeSlot"
+                                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                            >
+                            <div class="ml-3">
+                                <div class="font-medium text-gray-900">下午時段</div>
+                                <div class="text-sm text-gray-600">14:00 - 17:00</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div id="timeSlotError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請選擇時段
+                    </div>
+                </div>
+
+                <!-- Contact Method -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">
+                        聯絡方式 <span class="text-error">*</span>
+                    </label>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input 
+                                type="radio" 
+                                name="contactMethod" 
+                                value="line"
+                                data-bind="formData.contactMethod"
+                                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                                required
+                            >
+                            <i class="fab fa-line text-green-500 text-xl ml-3 mr-2"></i>
+                            <span class="font-medium text-gray-900">LINE</span>
+                        </label>
+                        
+                        <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                            <input 
+                                type="radio" 
+                                name="contactMethod" 
+                                value="whatsapp"
+                                data-bind="formData.contactMethod"
+                                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                            >
+                            <i class="fab fa-whatsapp text-green-500 text-xl ml-3 mr-2"></i>
+                            <span class="font-medium text-gray-900">WhatsApp</span>
+                        </label>
+                    </div>
+                    <div id="contactMethodError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請選擇聯絡方式
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <label for="contactInfo" class="block text-sm font-medium text-gray-700 mb-2">
+                        聯絡資料 <span class="text-error">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="contactInfo" 
+                        name="contactInfo"
+                        data-bind="formData.contactInfo"
+                        data-mock="true"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        placeholder="請輸入您的 LINE ID 或 WhatsApp 號碼"
+                        required
+                    >
+                    <div id="contactInfoError" class="hidden text-error text-sm mt-1">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        請輸入聯絡資料
+                    </div>
+                </div>
+
+                <!-- Additional Notes -->
+                <div>
+                    <label for="notes" class="block text-sm font-medium text-gray-700 mb-2">
+                        備註（選填）
+                    </label>
+                    <textarea 
+                        id="notes" 
+                        name="notes"
+                        data-bind="formData.notes"
+                        rows="3"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
+                        placeholder="如有任何特殊要求或問題，請在此說明..."
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button 
+                        type="submit"
+                        data-event="click:handleSubmit"
+                        data-implementation="Should validate form before submission"
+                        class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                    >
+                        <i class="fas fa-calendar-check"></i>
+                        <span>確認預訂</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- @END_COMPONENT: BookingForm -->
+    </main>
+
+    <!-- @COMPONENT: ConfirmationModal -->
+    <div id="confirmationModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg max-w-md w-full p-6 transform transition-all">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-white text-2xl"></i>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">預訂成功！</h3>
+                <p class="text-gray-600 mb-6">您的導賞團預訂已成功提交</p>
+                
+                <div class="bg-gray-50 rounded-lg p-4 mb-6 text-left">
+                    <h4 class="font-semibold text-gray-900 mb-3">預訂詳情</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">姓名：</span>
+                            <span id="confirmName" data-bind="formData.name" data-mock="true">陳小明</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">導賞團：</span>
+                            <span id="confirmTour" data-bind="formData.tourName" data-mock="true">薩克森豪森集中營一日遊</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">日期：</span>
+                            <span id="confirmDate" data-bind="formData.date" data-mock="true">2024-02-15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">時段：</span>
+                            <span id="confirmTime" data-bind="formData.timeSlotName" data-mock="true">上午 10:00-13:00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">聯絡方式：</span>
+                            <span id="confirmContact" data-bind="formData.contactInfo" data-mock="true">LINE: johnchen123</span>
+                        </div>
+                        <div class="border-t pt-2 mt-2">
+                            <div class="flex justify-between font-semibold">
+                                <span>總費用：</span>
+                                <span class="text-primary">€20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-sm text-gray-600 mb-6">
+                    <p>我們會透過您提供的聯絡方式與您確認預訂詳情。</p>
+                </div>
+                
+                <button 
+                    id="closeModal"
+                    data-event="click:closeModal"
+                    class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                    關閉
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: ConfirmationModal -->
+
+    <!-- @COMPONENT: LoadingSpinner -->
+    <div id="loadingSpinner" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8">
+            <div class="flex flex-col items-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+                <p class="text-gray-600">處理預訂中...</p>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: LoadingSpinner -->
+
+    <script>
+        (function() {
+            // TODO: Implement business logic, API calls, or state management
+            
+            // Set minimum date to today
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+
+            // Form validation
+            const form = document.getElementById('bookingForm');
+            const confirmationModal = document.getElementById('confirmationModal');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+
+            // Validation functions
+            function validateField(fieldName, value, customMessage) {
+                const errorElement = document.getElementById(fieldName + 'Error');
+                const inputElement = document.querySelector(`[name="${fieldName}"], #${fieldName}`);
+                
+                if (!value || value.trim() === '') {
+                    errorElement.classList.remove('hidden');
+                    inputElement.classList.add('border-error');
+                    return false;
+                } else {
+                    errorElement.classList.add('hidden');
+                    inputElement.classList.remove('border-error');
+                    return true;
+                }
+            }
+
+            function validateForm() {
+                const formData = new FormData(form);
+                let isValid = true;
+
+                // Validate all required fields
+                isValid &= validateField('name', formData.get('name'));
+                isValid &= validateField('tour', formData.get('tour'));
+                isValid &= validateField('date', formData.get('date'));
+                isValid &= validateField('timeSlot', formData.get('timeSlot'));
+                isValid &= validateField('contactMethod', formData.get('contactMethod'));
+                isValid &= validateField('contactInfo', formData.get('contactInfo'));
+
+                return Boolean(isValid);
+            }
+
+            // Real-time validation
+            form.addEventListener('input', function(e) {
+                const field = e.target;
+                if (field.hasAttribute('required')) {
+                    validateField(field.name || field.id, field.value);
+                }
+            });
+
+            form.addEventListener('change', function(e) {
+                const field = e.target;
+                if (field.hasAttribute('required')) {
+                    validateField(field.name || field.id, field.value);
+                }
+            });
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    return;
+                }
+
+                // Show loading spinner
+                loadingSpinner.classList.remove('hidden');
+                loadingSpinner.classList.add('flex');
+
+                // Simulate API call
+                setTimeout(() => {
+                    loadingSpinner.classList.add('hidden');
+                    loadingSpinner.classList.remove('flex');
+                    
+                    // Update confirmation modal with form data
+                    updateConfirmationModal();
+                    
+                    // Show confirmation modal
+                    confirmationModal.classList.remove('hidden');
+                    confirmationModal.classList.add('flex');
+                }, 1500);
+            });
+
+            function updateConfirmationModal() {
+                const formData = new FormData(form);
+                
+                // Update confirmation details (in real implementation, this would use actual form data)
+                document.getElementById('confirmName').textContent = formData.get('name') || '陳小明';
+                document.getElementById('confirmDate').textContent = formData.get('date') || '2024-02-15';
+                
+                // Update tour name
+                const tourSelect = document.getElementById('tour');
+                const selectedTour = tourSelect.options[tourSelect.selectedIndex];
+                document.getElementById('confirmTour').textContent = selectedTour.text.split(' - ')[0] || '薩克森豪森集中營一日遊';
+                
+                // Update time slot
+                const timeSlot = formData.get('timeSlot');
+                const timeSlotText = timeSlot === 'morning' ? '上午 10:00-13:00' : '下午 14:00-17:00';
+                document.getElementById('confirmTime').textContent = timeSlotText;
+                
+                // Update contact info
+                const contactMethod = formData.get('contactMethod');
+                const contactInfo = formData.get('contactInfo');
+                const contactText = `${contactMethod.toUpperCase()}: ${contactInfo}`;
+                document.getElementById('confirmContact').textContent = contactText || 'LINE: johnchen123';
+            }
+
+            // Close modal
+            document.getElementById('closeModal').addEventListener('click', function() {
+                confirmationModal.classList.add('hidden');
+                confirmationModal.classList.remove('flex');
+                
+                // Reset form
+                form.reset();
+                
+                // Clear any error states
+                document.querySelectorAll('.text-error').forEach(el => {
+                    if (el.id.includes('Error')) {
+                        el.classList.add('hidden');
+                    }
+                });
+                
+                document.querySelectorAll('.border-error').forEach(el => {
+                    el.classList.remove('border-error');
+                });
+            });
+
+            // Close modal when clicking outside
+            confirmationModal.addEventListener('click', function(e) {
+                if (e.target === confirmationModal) {
+                    document.getElementById('closeModal').click();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
