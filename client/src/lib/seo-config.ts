@@ -1,7 +1,7 @@
 export const SEO_CONFIG = {
   // Default site information
   siteName: "Berber Tours",
-  siteUrl: "https://your-domain.com", // Replace with your actual domain
+  siteUrl: "https://berber-rose.vercel.app", // Replace with your actual domain
   defaultTitle: "Berber Tours - Authentic Travel Experiences & Guided Adventures",
   defaultDescription: "Discover authentic Berber culture with our guided tours, travel services, and immersive experiences. Expert local guides, cultural tours, and unforgettable adventures await.",
   defaultKeywords: "Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism",
@@ -12,8 +12,8 @@ export const SEO_CONFIG = {
   instagramUrl: "https://www.instagram.com/berbertours",
   
   // Images
-  defaultOgImage: "https://your-domain.com/og-image.jpg",
-  logoUrl: "https://your-domain.com/logo.png",
+  defaultOgImage: "https://berber-rose.vercel.app/og-image.jpg",
+  logoUrl: "https://berber-rose.vercel.app/logo.png",
   
   // Contact information
   contactInfo: {

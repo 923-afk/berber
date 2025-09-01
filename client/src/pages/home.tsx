@@ -16,7 +16,7 @@ export default function Home() {
         title="Berber Tours - Authentic Travel Experiences & Guided Adventures"
         description="Discover authentic Berber culture with our guided tours, travel services, and immersive experiences. Expert local guides, cultural tours, and unforgettable adventures await."
         keywords="Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism"
-        canonical="https://your-domain.com"
+        canonical="https://berber-rose.vercel.app"
       />
       
       <StructuredData 
