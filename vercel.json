@@ -4,6 +4,16 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm install",
   "framework": "vite",
+  "routes": [
+    {
+      "src": "/googlea6ffea71d3f83697.html",
+      "dest": "/googlea6ffea71d3f83697.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/index.html",
