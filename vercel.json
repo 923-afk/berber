@@ -4,6 +4,9 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm install",
   "framework": "vite",
+  "env": {
+    "FORCE_REBUILD": "2025-09-02-18:50"
+  },
 
   "headers": [
     {
