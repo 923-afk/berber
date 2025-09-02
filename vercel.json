@@ -4,14 +4,10 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm install",
   "framework": "vite",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/googlea6ffea71d3f83697.html",
-      "dest": "/googlea6ffea71d3f83697.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/googlea6ffea71d3f83697.html",
+      "destination": "/googlea6ffea71d3f83697.html"
     }
   ],
   "headers": [
