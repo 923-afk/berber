@@ -4,12 +4,20 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm ci",
   "env": {
-    "FORCE_REBUILD": "2025-09-02-20:05"
+    "FORCE_REBUILD": "2025-09-02-20:20"
   },
 
   "headers": [
     {
       "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate, max-age=0" },
+        { "key": "Pragma", "value": "no-cache" },
+        { "key": "Expires", "value": "0" }
+      ]
+    },
+    {
+      "source": "/:path*.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate, max-age=0" },
         { "key": "Pragma", "value": "no-cache" },
@@ -23,8 +31,7 @@
       ]
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/:path*", "destination": "/index.html" }
   ]
 }
