@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "dist/public",
-  "installCommand": "npm install",
+  "installCommand": "npm ci",
   "env": {
     "FORCE_REBUILD": "2025-09-02-20:05"
   },
