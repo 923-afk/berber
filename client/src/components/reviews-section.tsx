@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 
 // Updated with additional Chinese reviews
 export default function ReviewsSection() {
+  console.log("ReviewsSection component loaded");
   const reviews = [
     {
       rating: 5,
@@ -79,7 +80,7 @@ export default function ReviewsSection() {
     <section id="reviews" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">客戶真實評價</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">客戶真實評價 ({reviews.length} 則評價)</h2>
           <p className="text-lg text-warm-gray max-w-2xl mx-auto">
             來自世界各地的遊客對我們服務的真實評價和推薦
           </p>
