@@ -4,7 +4,7 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm ci",
   "env": {
-    "FORCE_REBUILD": "2025-09-26-20:30"
+    "FORCE_REBUILD": "2025-09-26-21:45"
   },
 
   "headers": [
