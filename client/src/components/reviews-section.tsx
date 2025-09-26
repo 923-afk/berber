@@ -3,6 +3,7 @@ import { Star } from "lucide-react";
 // Updated with additional Chinese reviews
 export default function ReviewsSection() {
   console.log("ReviewsSection component loaded - TEST");
+  console.log("Reviews count:", reviews.length);
   const reviews = [
     {
       rating: 5,
