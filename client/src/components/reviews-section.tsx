@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 
+// Updated with additional Chinese reviews
 export default function ReviewsSection() {
   const reviews = [
     {
