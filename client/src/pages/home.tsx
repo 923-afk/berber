@@ -29,6 +29,9 @@ export default function Home() {
       />
       
       <Navigation />
+      <div style={{background: 'red', color: 'white', padding: '20px', textAlign: 'center'}}>
+        TEST: ReviewsSection should appear after GuideSection
+      </div>
       <HeroSection />
       <ServicesSection />
       <ToursSection />
