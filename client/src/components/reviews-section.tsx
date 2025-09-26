@@ -11,6 +11,27 @@ export default function ReviewsSection() {
     },
     {
       rating: 5,
+      text: "服務非常貼心！導遊中文流利，講解深入淺出，還會主動幫忙拍照留念，行程安排也很人性化。",
+      name: "周先生",
+      location: "來自中國上海",
+      image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    },
+    {
+      rating: 5,
+      text: "整體體驗超出預期！交通、時間、內容都安排得剛剛好，小朋友也聽得津津有味，值得推薦。",
+      name: "黃太",
+      location: "來自澳門",
+      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    },
+    {
+      rating: 5,
+      text: "專業、細心、可靠。導遊非常尊重每位團友的感受，重點清晰，歷史背景講得很到位，收穫滿滿。",
+      name: "高女士",
+      location: "來自中國北京",
+      image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    },
+    {
+      rating: 5,
       text: "第一次參加中文導賞團，感受真的很不一樣！用母語聽歷史故事特別有感觸，Berber 很用心地解答我們的每個問題。",
       name: "張先生",
       location: "來自台灣",
