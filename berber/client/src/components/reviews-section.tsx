@@ -70,12 +70,6 @@ export default function ReviewsSection() {
                 {review.text}
               </p>
               <div className="flex items-center">
-                <img 
-                  src={review.image} 
-                  alt={`Customer review from ${review.name}`} 
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                  data-testid={`review-avatar-${index}`}
-                />
                 <div>
                   <h4 className="font-semibold">{review.name}</h4>
                   <p className="text-warm-gray text-sm">{review.location}</p>
@@ -83,21 +77,6 @@ export default function ReviewsSection() {
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* Review Statistics */}
-        <div className="mt-16 bg-white rounded-2xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">客戶滿意度統計</h3>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} data-testid={`stat-${index}`}>
-                <div className="text-3xl font-bold text-berlin-red mb-2">{stat.value}</div>
-                <p className="text-warm-gray">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
