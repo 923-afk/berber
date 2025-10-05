@@ -13,69 +13,55 @@ export default function ReviewsSection() {
       rating: 5,
       text: "服務非常貼心！導遊中文流利，講解深入淺出，還會主動幫忙拍照留念，行程安排也很人性化。",
       name: "周先生",
-      location: "來自上海",
-      image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自上海"
     },
     {
       rating: 5,
       text: "整體體驗超出預期！交通、時間、內容都安排得剛剛好，小朋友也聽得津津有味，值得推薦。",
       name: "黃太",
-      location: "來自澳門",
-      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自澳門"
     },
     {
       rating: 5,
       text: "專業、細心、可靠。導遊非常尊重每位團友的感受，重點清晰，歷史背景講得很到位，收穫滿滿。",
       name: "高女士",
-      location: "來自北京",
-      image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自北京"
     },
     {
       rating: 5,
       text: "第一次參加中文導賞團，感受真的很不一樣！用母語聽歷史故事特別有感觸，Berber 很用心地解答我們的每個問題。",
       name: "張先生",
-      location: "來自台灣",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自台灣"
     },
     {
       rating: 5,
       text: "很有意義的一次行程，不僅學到了歷史知識，更重要的是讓我們思考了很多關於人性和和平的問題。非常推薦！",
       name: "王太太",
-      location: "來自新加坡",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自新加坡"
     },
     {
       rating: 5,
       text: "預約過程很簡單，透過 WhatsApp 就搞定了。導遊準時到達，整個行程節奏很好，時間控制得很準確。",
       name: "陳同學",
-      location: "來自馬來西亞",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自馬來西亞"
     },
     {
       rating: 5,
       text: "小團制的感受真的很棒，可以隨時提問，導遊也會根據我們的興趣調整解說重點。物超所值！",
       name: "劉女士",
-      location: "來自大陸",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自大陸"
     },
     {
       rating: 5,
       text: "作為歷史愛好者，我對這次導賞非常滿意。導遊的專業知識豐富，能回答我們各種深入的問題。",
       name: "林教授",
-      location: "來自香港",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+      location: "來自香港"
     }
   ];
 
   console.log("ReviewsSection component loaded - TEST");
   console.log("Reviews count:", reviews.length);
 
-  const stats = [
-    { value: "98%", label: "客戶滿意度" },
-    { value: "500+", label: "服務客戶" },
-    { value: "4.9", label: "平均評分" },
-    { value: "95%", label: "回購率" }
-  ];
 
   return (
     <section id="reviews" className="py-20 bg-gray-50">
