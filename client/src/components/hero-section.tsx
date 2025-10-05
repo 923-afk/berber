@@ -20,7 +20,7 @@ export default function HeroSection() {
       </div>
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          發現柏林的<span className="text-berlin-gold">深度故事</span>
+          Berber Guide <span className="text-berlin-gold">柏林導賞</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
           專業中文導遊帶您深入了解柏林歷史文化<br />

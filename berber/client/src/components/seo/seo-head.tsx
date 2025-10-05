@@ -14,7 +14,7 @@ interface SEOHeadProps {
 export default function SEOHead({
   title = "Berber Tours - Authentic Travel Experiences & Guided Adventures",
   description = "Discover authentic Berber culture with our guided tours, travel services, and immersive experiences. Expert local guides, cultural tours, and unforgettable adventures await.",
-  keywords = "Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism, Berber culture, Atlas Mountains, Marrakech tours, Sahara desert tours, traditional villages, local markets, Morocco adventure, cultural immersion, Berber guide, historical tours, Morocco vacation, travel Morocco, Berber lifestyle, indigenous culture, Morocco sightseeing, Berber traditions, Morocco experiences, guided Morocco tours, Berber heritage, Morocco cultural tours, authentic travel Morocco, Berber villages, Morocco local guide, Berber hospitality, Morocco adventure tours, cultural exchange Morocco, Berber history, Morocco traditional tours, Berber customs, Morocco exploration, Berber experience, Morocco travel guide, Berber community, Morocco cultural experience, Morocco authentic tours, Berber way of life, Morocco heritage tours, 柏林導賞, 中文導遊, 薩克森豪森集中營, 柏林圍牆, 導賞服務, Berber Guide, Berlin tour guide, Chinese tour guide Berlin, Sachsenhausen concentration camp tour, Berlin Wall tour, guided tour service, historical Berlin tour, German history tour",
+  keywords = "Berber Guide 柏林導賞, 柏林導賞, 中文導遊, 薩克森豪森集中營, 導賞服務, Berber Guide, Berlin tour guide, Chinese tour guide Berlin, Sachsenhausen concentration camp tour, guided tour service, historical Berlin tour, German history tour, Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism, Berber culture, Atlas Mountains, Marrakech tours, Sahara desert tours, traditional villages, local markets, Morocco adventure, cultural immersion, Berber guide, historical tours, Morocco vacation, travel Morocco, Berber lifestyle, indigenous culture, Morocco sightseeing, Berber traditions, Morocco experiences, guided Morocco tours, Berber heritage, Morocco cultural tours, authentic travel Morocco, Berber villages, Morocco local guide, Berber hospitality, Morocco adventure tours, cultural exchange Morocco, Berber history, Morocco traditional tours, Berber customs, Morocco exploration, Berber experience, Morocco travel guide, Berber community, Morocco cultural experience, Morocco authentic tours, Berber way of life, Morocco heritage tours, Berlin Wall tour",
   canonical = "https://your-domain.com",
   ogImage = "https://your-domain.com/og-image.jpg",
   ogType = "website",
@@ -65,6 +65,9 @@ export default function SEOHead({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.href = canonical;
+    
+    // Force update meta property for Google
+    updateMetaTag('og:site_name', 'Berber Guide 柏林導賞', true);
     
   }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, noIndex]);
   
