@@ -24,7 +24,7 @@ export default function HeroSection() {
         </h1>
         <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
           專業中文導遊帶您深入了解柏林歷史文化<br />
-          薩克森豪森集中營 • 柏林圍牆 • 歷史見證
+          薩克森豪森集中營 • 柏林歷史 • 深度導賞
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
