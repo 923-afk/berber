@@ -6,8 +6,7 @@ export default function ReviewsSection() {
       rating: 5,
       text: "Berber 導遊非常專業，解說詳細生動，讓我們深入了解了這段沉重的歷史。整個行程安排得很好，強烈推薦給想了解德國歷史的朋友們！",
       name: "李女士",
-      location: "來自香港",
-      image: "https://pixabay.com/get/gae75592cae156a88afc6b1a26c57d9b8cdf6b00f3f944f3e2687e85adccadf0ceda2917bb9cc63263384b31984a28d57cbceb5ccd67090cf9e488991bc1cd03a_1280.jpg"
+      location: "來自香港"
     },
     {
       rating: 5,
@@ -34,7 +33,7 @@ export default function ReviewsSection() {
       rating: 5,
       text: "小團制的感受真的很棒，可以隨時提問，導遊也會根據我們的興趣調整解說重點。物超所值！",
       name: "劉女士",
-      location: "來自中國大陸",
+      location: "來自大陸",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
     },
     {
