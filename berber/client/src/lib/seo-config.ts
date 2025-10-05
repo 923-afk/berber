@@ -1,9 +1,9 @@
 export const SEO_CONFIG = {
   // Default site information
-  siteName: "Berber Tours",
+  siteName: "Berber Guide 柏林導賞",
   siteUrl: "https://berber-rose.vercel.app", // Replace with your actual domain
-  defaultTitle: "Berber Tours - Authentic Travel Experiences & Guided Adventures",
-  defaultDescription: "Discover authentic Berber culture with our guided tours, travel services, and immersive experiences. Expert local guides, cultural tours, and unforgettable adventures await.",
+  defaultTitle: "Berber Guide 柏林導賞 - Professional Chinese Tour Guide Berlin",
+  defaultDescription: "Professional Chinese tour guide in Berlin. Expert Sachsenhausen concentration camp tours, Berlin history tours, and cultural experiences. €20 per person including group fees.",
   defaultKeywords: "Berber Guide 柏林導賞, 柏林導賞, 中文導遊, 薩克森豪森集中營, 導賞服務, Berber Guide, Berlin tour guide, Chinese tour guide Berlin, Sachsenhausen concentration camp tour, guided tour service, historical Berlin tour, German history tour, Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism, Berber culture, Atlas Mountains, Marrakech tours, Sahara desert tours, traditional villages, local markets, Morocco adventure, cultural immersion, Berber guide, historical tours, Morocco vacation, travel Morocco, Berber lifestyle, indigenous culture, Morocco sightseeing, Berber traditions, Morocco experiences, guided Morocco tours, Berber heritage, Morocco cultural tours, authentic travel Morocco, Berber villages, Morocco local guide, Berber hospitality, Morocco adventure tours, cultural exchange Morocco, Berber history, Morocco traditional tours, Berber customs, Morocco exploration, Berber experience, Morocco travel guide, Berber community, Morocco cultural experience, Morocco authentic tours, Berber way of life, Morocco heritage tours, 柏林圍牆, Berlin Wall tour",
   
   // Social media
@@ -28,8 +28,8 @@ export const SEO_CONFIG = {
   // Page-specific SEO data
   pages: {
     home: {
-      title: "Berber Tours - Authentic Travel Experiences & Guided Adventures",
-      description: "Discover authentic Berber culture with our guided tours, travel services, and immersive experiences. Expert local guides, cultural tours, and unforgettable adventures await.",
+      title: "Berber Guide 柏林導賞 - Professional Chinese Tour Guide Berlin",
+      description: "Professional Chinese tour guide in Berlin. Expert Sachsenhausen concentration camp tours, Berlin history tours, and cultural experiences. €20 per person including group fees.",
       keywords: "Berber Guide 柏林導賞, 柏林導賞, 中文導遊, 薩克森豪森集中營, 導賞服務, Berber Guide, Berlin tour guide, Chinese tour guide Berlin, Sachsenhausen concentration camp tour, guided tour service, historical Berlin tour, German history tour, Berber tours, Morocco travel, cultural tours, guided adventures, local experiences, travel services, authentic tourism, Berber culture, Atlas Mountains, Marrakech tours, Sahara desert tours, traditional villages, local markets, Morocco adventure, cultural immersion, Berber guide, historical tours, Morocco vacation, travel Morocco, Berber lifestyle, indigenous culture, Morocco sightseeing, Berber traditions, Morocco experiences, guided Morocco tours, Berber heritage, Morocco cultural tours, authentic travel Morocco, Berber villages, Morocco local guide, Berber hospitality, Morocco adventure tours, cultural exchange Morocco, Berber history, Morocco traditional tours, Berber customs, Morocco exploration, Berber experience, Morocco travel guide, Berber community, Morocco cultural experience, Morocco authentic tours, Berber way of life, Morocco heritage tours, 柏林圍牆, Berlin Wall tour"
     },
     services: {
